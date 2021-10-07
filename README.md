@@ -39,7 +39,7 @@ This is a Firebase project, so you will need to head to the [Firebase Console](h
 
 1. `npm install`
 
-1. `npm run build --configuration production --output-path ../public`
+1. `npm run build -- --configuration production --output-path ../public`
 
 ## Prepare the Firebase CLI
 

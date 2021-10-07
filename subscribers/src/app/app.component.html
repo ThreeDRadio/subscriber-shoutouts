@@ -1,0 +1,33 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Recent Orders</a>
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+</nav>
+<div class="list-group list-group-flush">
+  <div class="order list-group-item" *ngFor="let order of orders | async">
+    <h4>
+      <span class="badge badge-info">
+        {{ order.created | amTimeAgo }}
+      </span>
+      {{ order.firstName }} from {{ order.city }}
+    </h4>
+    <p>{{ order.created | amDateFormat: "D/MM/YYYY @ h:mm a" }}</p>
+    <ul>
+      <li *ngFor="let item of order.items">
+        {{ item.name }}
+        <span *ngIf="item.bandName">
+          - <b>{{ item.bandName }}</b>
+        </span>
+      </li>
+    </ul>
+  </div>
+</div>
