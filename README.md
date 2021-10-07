@@ -33,6 +33,8 @@ This is a Firebase project, so you will need to head to the [Firebase Console](h
 
 1. `cd subscribers`
 
+1. If you use nvm to manage node version, `nvm install && nvm use`
+
 1. Open up `src/environments/environment.ts` and paste the Firebase config in.
 
 1. Do the same with `src/environments.environment.prod.ts`
